@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Variables a utilizar en la pagina */
+
+:root {
+    --color1: #282248;
+    --color2: #18142F;
+    --color3: #2C2844;
+    --color4: #1F1A3A;
+    --color5: #2280eb;
+    --color6: #22ebd0;
+    --color7: #8d5cdb;
+    --color8: #6C9CDD;
+    --colortexto1: #FFFFFF;
+    --colortexto2: #3593FF;
+    --colortexto3: #e2d8d2;
+    --colortexto4: #FDCF00;
+    --colortexto5: #DC3545;
+    --colortexto6: #D06810;
+    --colortexto7: #6F42B8;
+    --colortexto8: #383158;
+}
+
+/* Estilos Generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--color2);
+    color: var(--colortexto1);
+}
+
+/* Estilos del Header y Menu de Navegacion */
+
+header {
+    height: 15vh;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__links-banner a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.header__links-banner a i {
+    color: var(--colortexto1);
+    font-size: 50px;
+    margin-right: 15px;
+}
+
+.header__links-banner a > h2 {
+    color: var(--colortexto1);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 14px;
+    letter-spacing: 6px;
+}
+
+.header__links-banner a h2 span {
+    color: var(--colortexto1);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 34px;
+    letter-spacing: 0px;
+}
+
+.header__links a {
+    color: var(--colortexto1);
+    margin-right: 30px;
+    font-weight: 300;
+}
+
+.header__links .header__links-group i {
+    color: var(--colortexto4);
+}
+
+.header__links .header__links-group a {
+    color: var(--colortexto3);
+    font-weight: 800;
+}
+
+.header__links a:hover {
+    color: var(--colortexto2);
+}
+
+.header__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.header__navbar .header__navbar-search-button {
+    position: relative;
+    margin-right: 30px;
+}
+
+.header__navbar .header__navbar-search-button input {
+    background-color: var(--color2);
+    padding: 10px 14px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: var(--colortexto3);
+    width: 180px;
+    font-size: 14px;
+}
+
+.header__navbar .header__navbar-search-button i {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: var(--colortexto3);
+}
+
+.header__navbar a {
+    background-color: var(--colortexto2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.header__navbar a i {
+    font-size: 20px;
+    padding: 10px 12px;
+    color: var(--colortexto3);
+}
+
+.header__navbar a:hover {
+    background-color: var(--color5);
+}
+
+/* Estilos para el Interruptor */
+
+#container__toggle {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 50px;
+    height: 60px;
+    background-color: var(--colortexto2);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 14px;
+}
+
+.toggle p {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 6px;
+}
+
+#container__toggle:hover {
+    background-color: var(--color5);
+}
+
+/* Estilos Seccion Principal */
+
+main {
+    margin: 20px;
+}
+
+main h2 i {
+    color: var(--color6);
+}
+
+main h2 {
+    margin: 40px 0px;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.contenedor__cards {
+    display: flex;
+    flex-wrap: wrap; /* Hace que los elementos se envuelvan en una nueva línea cuando no hay suficiente espacio horizontal */
+    justify-content: center;
+}
+
+.contenedor__cards-card {
+    flex-basis: 18%; /* Cada tarjeta ocupa el 20% del ancho del contenedor (5 tarjetas en una fila) */
+    margin: 0 20px 30px 0;
+    position: relative;
+}
+
+.contenedor__cards-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contenedor__cards-card a {
+    margin-top: 10px;
+    color: var(--colortexto3);
+    display: block;
+    text-decoration: none;
+}
+
+.contenedor__cards-card a:hover {
+    color: var(--colortexto2);
+}
+
+.contenedor__cards-card:nth-child(5n+5) {
+    margin-right: 0;
+}
+
+/* Seccion ultimo contenido agregado */
+
+.ultimos__agregados {
+    display: flex;
+}
+
+.ultimos__agregados .ultimos__agregados-contenido-titulo {
+    margin: 20px;
+}
+
+.ultimos__agregados .ultimos__agregados-contenido-titulo h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.ultimos__agregados .ultimos__agregados-contenido-titulo h3 .icon__uac {
+    color: var(--colortexto5);
+}
+
+.ultimos__agregados .ultimos__agregados-contenido-titulo h3 .icon__uac2 {
+    color: var(--colortexto6);
+}
+
+.ultimos__agregados-contenido-titulo h3 .icon__uac3 {
+    color: var(--colortexto7);
+}
+
+.ultimos__agregados-contenido-titulo .ultimos__agregados-contenido-grupos {
+    display: flex;
+    flex-direction: column;
+}
+
+.ultimos__agregados-contenido-titulo .ultimos__agregados-contenido-grupos .ultimos__agregados-contenido-fila {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo1 img {
+    width: 110px;
+    height: 180px;
+    border-radius: 4px;
+    object-fit: cover;
+    position: relative;
+}
+
+.ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo1 .span__categoria {
+    background-color: var(--colortexto5);
+    width: 4px;
+    height: 20px;
+    position: absolute;
+    top: 80%;
+    left: 4px;
+}
+
+.ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo1 .span__categoria-nombre {
+    position: absolute;
+    top: 80%;
+    left: 20px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--colortexto3);
+}
+
+.ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 {
+    padding: 25px 20px;
+}
+
+.ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 a {
+    color: var(--colortexto1);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 a:hover {
+    color: var(--colortexto2);
+}
+
+.ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: var(--colortexto3);
+}
+
+.ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 .ultimos__agregados-enlace-genero {
+    margin-right: 10px;
+    background-color: var(--colortexto8);
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+.ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 .ultimos__agregados-enlace-genero:hover {
+    background-color: var(--color5);
+    color: var(--colortexto1);
+}
+
+.mas__contenido {
+    display: flex;
+    justify-content: center;
+    background-color: var(--colortexto8);
+    height: 40px;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 18px;
+    color: var(--colortexto3);
+}
+
+.mas__contenido:hover {
+    background-color: var(--color1);
+    color: var(--colortexto1);
+}
+
+/* Seccion Últimos Animes */
+
+.ultimos__animes {
+    margin: 10px;
+}
+
+.ultimos__animes-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ultimos__animes h2 i {
+    color: var(--color6);
+}
+
+.ultimos__animes-titulo h2 {
+    margin: 40px 0px;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.ultimos__animes .ultimos__animes-ver-mas {
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: var(--colortexto2);
+    color: var(--colortexto1);
+    border-radius: 20px;
+}
+
+.ultimos__animes .ultimos__animes-ver-mas:hover { 
+    background-color: var(--color5);
+}
+
+.ultimos__animes-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ultimos__animes .ultimos__animes-cards-card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 15%;
+    margin: 10px;
+}
+
+.ultimos__animes .ultimos__animes-cards-card img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.ultimos__animes .ultimos__animes-cards-card a {
+    margin-top: 14px;
+    color: var(--colortexto3);
+    font-size: 14px;
+}
+
+.ultimos__animes .ultimos__animes-cards-card a:hover {
+    color: var(--color5);
+}
+
+/* Seccion Pie de Pagina */
+
+footer {
+    background-color: var(--color1);
+    padding: 40px 20px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__container {
+    display: flex;
+    align-items: center;
+}
+
+.footer__container .footer__banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__container .footer__banner i {
+    color: var(--colortexto1);
+    font-size: 50px;
+    margin-right: 15px;
+}
+
+.footer__container .footer__banner > h2 {
+    color: var(--colortexto1);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 14px;
+    letter-spacing: 6px;
+}
+
+.footer__container .footer__banner h2 span {
+    color: var(--colortexto1);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 34px;
+    letter-spacing: 0px;
+}
+
+.footer__container .footer__enlaces {
+    margin-left: 50px;
+}
+
+.footer__container .footer__enlaces a {
+    margin-right: 30px;
+    font-size: 20px;
+    color: var(--colortexto3);
+}
+
+.footer__container .footer__enlaces a:hover {
+    color: var(--colortexto1);
+}
+
+footer .footer__linea {
+    margin-top: 40px;
+    background-color: var(--colortexto3);
+    width: 100%;
+    height: 2px;
+    display: flex;
+}
+
+footer h4 {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--colortexto3);
+}
