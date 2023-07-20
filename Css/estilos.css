@@ -21,6 +21,17 @@
     --colortexto8: #383158;
 }
 
+/* Estilos para el track del scroll (la barra) */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra */
+}
+  
+/* Estilos para el thumb del scroll (el "brazo" que se desplaza) */
+::-webkit-scrollbar-thumb {
+    background-color: #2280eb; /* Color del thumb */
+    border-radius: 0; /* Eliminar esquinas redondeadas */
+}
+
 /* Estilos Generales */
 
 * {
@@ -151,6 +162,7 @@ header {
 
 #container__toggle {
     position: fixed;
+    z-index: 99;
     top: 50%;
     right: 0;
     width: 50px;
@@ -203,7 +215,6 @@ main h2 {
 .contenedor__cards-card {
     flex-basis: 18%; /* Cada tarjeta ocupa el 20% del ancho del contenedor (5 tarjetas en una fila) */
     margin: 0 20px 30px 0;
-    position: relative;
 }
 
 .contenedor__cards-card img {
@@ -266,6 +277,7 @@ main h2 {
     display: flex;
     flex-direction: row;
     position: relative;
+    z-index: 0;
     margin-bottom: 30px;
 }
 
@@ -477,4 +489,363 @@ footer h4 {
     margin-top: 20px;
     text-align: center;
     color: var(--colortexto3);
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 30vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header__links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    
+    .header__links-banner a {
+        padding: 10px;
+    }
+    
+    .header__links-banner a i {
+        font-size: 30px;
+    }
+    
+    .header__links-banner a > h2 {
+        font-size: 14px;
+    }
+
+    .header__links-banner a h2 span {
+        font-size: 26px;
+    }
+    
+    .header__links {
+        margin-top: 10px;
+    }
+
+    .header__navbar {
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 30px;
+    }
+
+    .header__navbar .header__navbar-search-button input {
+        width: 160px;
+    }
+
+    .header__navbar a i {
+        font-size: 16px;
+        padding: 12px 13px;
+    }
+
+    /* estilos interruptor */
+
+    #contenedor__togle {
+        z-index: 1;
+    }
+
+    /* seccion ultimos episodios */
+
+    main {
+        margin: 10px;
+    }
+    
+    main h2 {
+        margin: 40px 10px;
+        font-size: 30px;
+    }
+    
+    .contenedor__cards {
+        display: flex;
+        flex-wrap: wrap; /* Hace que los elementos se envuelvan en una nueva línea cuando no hay suficiente espacio horizontal */
+        justify-content: center;
+    }
+    
+    .contenedor__cards-card {
+        flex-basis: 40%; /* Cada tarjeta ocupa el 20% del ancho del contenedor (5 tarjetas en una fila) */
+        margin: 0 20px 30px 10px;
+    }
+    
+    .contenedor__cards-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+        
+    .contenedor__cards-card:nth-child(5n+5) {
+        margin-right: 10px;
+    }
+
+    /* estilos seccion ultimos agregados */
+
+    .ultimos__agregados {
+        overflow: scroll;
+    }
+    
+    .ultimos__agregados .ultimos__agregados-contenido-titulo h3 {
+        font-size: 20px;
+    }
+    
+    .ultimos__agregados-contenido-titulo .ultimos__agregados-contenido-grupos {
+        width: 100vw;
+    }
+    
+    .ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo1 img {
+        width: 120px;
+        height: 200px;
+        /* position: relative; */
+    }
+        
+    .ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 {
+        padding: 30px 20px;
+    }
+    
+    .ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 a {
+        color: var(--colortexto1);
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+        
+    .ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 .ultimos__agregados-enlace-genero {
+        margin-right: 10px;
+        background-color: var(--colortexto8);
+        padding: 6px 10px;
+        border-radius: 20px;
+    }
+    
+    /* estilos pie de pagina */
+
+    footer {
+        padding: 30px 20px;
+        height: 40vh;
+    }
+    
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        
+    .footer__container .footer__banner i {
+        font-size: 30px;
+    }
+        
+    .footer__container .footer__banner h2 span {
+        font-size: 30px;
+    }
+    
+    .footer__container .footer__enlaces {
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+    
+    .footer__container .footer__enlaces a {
+        margin-right: 20px;
+        font-size: 18px;
+    }
+        
+    footer .footer__linea {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        height: 30vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header__links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    
+    .header__links-banner a {
+        padding: 10px;
+    }
+    
+    .header__links-banner a i {
+        font-size: 30px;
+    }
+    
+    .header__links-banner a > h2 {
+        font-size: 14px;
+    }
+
+    .header__links-banner a h2 span {
+        font-size: 26px;
+    }
+    
+    .header__links {
+        margin-top: 10px;
+    }
+
+    .header__navbar {
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 30px;
+    }
+
+    .header__navbar .header__navbar-search-button input {
+        width: 160px;
+    }
+
+    .header__navbar a i {
+        font-size: 16px;
+        padding: 12px 13px;
+    }
+
+    /* estilos interruptor */
+
+    #contenedor__togle {
+        z-index: 1;
+    }
+
+    /* seccion ultimos episodios */
+
+    main {
+        margin: 10px;
+    }
+    
+    main h2 {
+        margin: 40px 10px;
+        font-size: 30px;
+    }
+    
+    .contenedor__cards {
+        display: flex;
+        flex-wrap: wrap; /* Hace que los elementos se envuelvan en una nueva línea cuando no hay suficiente espacio horizontal */
+        justify-content: center;
+    }
+    
+    .contenedor__cards-card {
+        flex-basis: 40%; /* Cada tarjeta ocupa el 20% del ancho del contenedor (5 tarjetas en una fila) */
+        margin: 0 20px 30px 10px;
+    }
+    
+    .contenedor__cards-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+        
+    .contenedor__cards-card:nth-child(5n+5) {
+        margin-right: 10px;
+    }
+
+    /* estilos seccion ultimos agregados */
+
+    .ultimos__agregados {
+        overflow: scroll;
+    }
+    
+    .ultimos__agregados .ultimos__agregados-contenido-titulo h3 {
+        font-size: 20px;
+    }
+    
+    .ultimos__agregados-contenido-titulo .ultimos__agregados-contenido-grupos {
+        width: 100vw;
+    }
+    
+    .ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo1 img {
+        width: 120px;
+        height: 200px;
+        /* position: relative; */
+    }
+        
+    .ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 {
+        padding: 30px 20px;
+    }
+    
+    .ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 a {
+        color: var(--colortexto1);
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 p { 
+        font-size: 10px;
+    }
+        
+    .ultimos__agregados-contenido-fila .ultimos__agregados-contenido-grupo2 .ultimos__agregados-enlace-genero {
+        margin-right: 10px;
+        background-color: var(--colortexto8);
+        padding: 6px 10px;
+        font-size: 10px;
+        border-radius: 20px;
+    }
+
+    /* seccion ultimos animes agregados */
+
+    .ultimos__animes {
+        margin: 10px;
+    }
+    
+    .ultimos__animes-titulo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ultimos__animes-titulo h2 {
+        margin: 30px 0px;
+        font-size: 30px;
+    }
+    
+    .ultimos__animes .ultimos__animes-ver-mas {
+        margin-right: 0px;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+    }
+    
+    .ultimos__animes-cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .ultimos__animes .ultimos__animes-cards-card {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 40%;
+    }
+    
+    .ultimos__animes .ultimos__animes-cards-card img {
+        width: 160px;
+        height: 250px;
+    }
+    
+    /* estilos pie de pagina */
+
+    footer {
+        padding: 30px 20px;
+        height: 40vh;
+    }
+    
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        
+    .footer__container .footer__banner i {
+        font-size: 30px;
+    }
+        
+    .footer__container .footer__banner h2 span {
+        font-size: 30px;
+    }
+    
+    .footer__container .footer__enlaces {
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+    
+    .footer__container .footer__enlaces a {
+        margin-right: 20px;
+        font-size: 18px;
+    }
+        
+    footer .footer__linea {
+        margin-top: 30px;
+    }
 }

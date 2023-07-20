@@ -314,6 +314,30 @@
     </footer>
 
     <script src="Js/toggle.js"></script>
+    <script>
+        // Función para aplicar el estilo personalizado del scroll
+        function applyCustomScroll() {
+            const scrollStyle = `
+                /* Estilos para el track del scroll (la barra) */
+                ::-webkit-scrollbar {
+                width: 10px; /* Ancho de la barra */
+                }
+        
+                /* Estilos para el thumb del scroll (el "brazo" que se desplaza) */
+                ::-webkit-scrollbar-thumb {
+                background-color: #2280eb; /* Color del thumb */
+                border-radius: 5px; /* Radio de los bordes del thumb */
+                }
+            `;
+      
+            const styleTag = document.createElement("style");
+            styleTag.appendChild(document.createTextNode(scrollStyle));
+            document.head.appendChild(styleTag);
+        }
+        // Ejecutar la función cuando el documento esté listo
+        document.addEventListener("DOMContentLoaded", applyCustomScroll);
+    </script>
+      
 
 </body>
 </html>
